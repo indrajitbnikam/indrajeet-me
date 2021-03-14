@@ -16,7 +16,7 @@ const Header = () => (
     <LinksContainer>
       <HeaderLink to='/blogs'>Blogs</HeaderLink>
       <HeaderLink to='/projects'>Projects</HeaderLink>
-      <HeaderLink to='/about'>About</HeaderLink>
+      <HeaderLink to='/journey'>Journey</HeaderLink>
     </LinksContainer>
   </HeaderContainer>
 );

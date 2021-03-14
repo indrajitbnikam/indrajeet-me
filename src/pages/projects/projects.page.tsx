@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout/layout.component";
 import './projects.scss';
 import { ReactComponent as URLIcon } from '../../assets/url-icon.svg';
-import { ReactComponent as STARIcon } from '../../assets/star.svg';
 import { StarIcon, GitForkIcon } from '@primer/octicons-react'
 
 const ProjectsPage = () => {

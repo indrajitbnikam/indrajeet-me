@@ -1,0 +1,47 @@
+.vertical-timeline-element-content {
+  color: #444;
+}
+
+.vertical-timeline::before {
+  background: #ddd;
+}
+
+.vertical-timeline-element--work .vertical-timeline-element-icon {
+  background-color: #2196f3;
+}
+
+.vertical-timeline-element--work .vertical-timeline-element-content {
+  border-top: 3px solid #2196f3;
+}
+
+.vertical-timeline-element--work .vertical-timeline-element-content-arrow {
+  border-right: 7px solid #2196f3;
+}
+
+.vertical-timeline-element--special .vertical-timeline-element-icon {
+  background-color: #ffd700;
+}
+
+.vertical-timeline-element--special .vertical-timeline-element-content {
+  border-top: 3px solid #ffd700;
+}
+
+.vertical-timeline-element--special .vertical-timeline-element-content-arrow {
+  border-right: 7px solid #ffd700;
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-icon {
+  background-color: #e91e63;
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-content {
+  border-top: 3px solid #e91e63;
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-content-arrow {
+  border-right: 7px solid #e91e63;
+}
+
+.vertical-timeline-element-date {
+  color: #333;
+}
