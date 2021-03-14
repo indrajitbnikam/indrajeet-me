@@ -11,11 +11,19 @@ export const HeaderContainer = styled.div`
   position: relative;
 `;
 
-export const LogoContainer = styled(Link)`
+export const TitleContainer = styled(Link)`
   display: grid;
   place-items: center;
+  color: black;
+  text-decoration: none;
   height: 100%;
-  width: 80px;
+  margin: 15px;
+`;
+
+export const Title = styled.p`
+  color: #444;
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
 `;
 
 export const LogoImg = styled.img`

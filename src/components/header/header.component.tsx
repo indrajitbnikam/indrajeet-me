@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   HeaderContainer,
-  LogoContainer,
+  TitleContainer,
+  Title,
   LinksContainer,
   HeaderLink,
   LogoImg
@@ -10,9 +11,9 @@ import logoImage from '../../assets/Indrajeet-min.png';
 
 const Header = () => (
   <HeaderContainer>
-    <LogoContainer to='/'>
-      <LogoImg src={logoImage}></LogoImg>
-    </LogoContainer>
+    <TitleContainer to='/'>
+      <Title>Indrajeet Nikam</Title>
+    </TitleContainer>
     <LinksContainer>
       <HeaderLink to='/blogs'>Blogs</HeaderLink>
       <HeaderLink to='/projects'>Projects</HeaderLink>
