@@ -6,42 +6,45 @@
   background: #ddd;
 }
 
+.vertical-timeline-element-date {
+  color: #333;
+}
+
 .vertical-timeline-element--work .vertical-timeline-element-icon {
-  background-color: #2196f3;
+  background-color: #0e7fdb;
+  fill: white;
 }
 
 .vertical-timeline-element--work .vertical-timeline-element-content {
-  border-top: 3px solid #2196f3;
+  border-top: 3px solid #0e7fdb;
 }
 
 .vertical-timeline-element--work .vertical-timeline-element-content-arrow {
-  border-right: 7px solid #2196f3;
+  border-right: 7px solid #0e7fdb;
 }
 
 .vertical-timeline-element--special .vertical-timeline-element-icon {
-  background-color: #ffd700;
+  background-color: #c9ac09;
+  fill: white;
 }
 
 .vertical-timeline-element--special .vertical-timeline-element-content {
-  border-top: 3px solid #ffd700;
+  border-top: 3px solid #c9ac09;
 }
 
 .vertical-timeline-element--special .vertical-timeline-element-content-arrow {
-  border-right: 7px solid #ffd700;
+  border-right: 7px solid #c9ac09;
 }
 
 .vertical-timeline-element--education .vertical-timeline-element-icon {
-  background-color: #e91e63;
+  background-color: #3eaf7c;
+  fill: white;
 }
 
 .vertical-timeline-element--education .vertical-timeline-element-content {
-  border-top: 3px solid #e91e63;
+  border-top: 3px solid #3eaf7c;
 }
 
 .vertical-timeline-element--education .vertical-timeline-element-content-arrow {
-  border-right: 7px solid #e91e63;
-}
-
-.vertical-timeline-element-date {
-  color: #333;
+  border-right: 7px solid #3eaf7c;
 }

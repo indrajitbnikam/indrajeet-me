@@ -7,6 +7,7 @@ import Header from './components/header/header.component';
 import { Route, Switch } from 'react-router';
 import HomePage from './pages/home/home.page';
 import JourneyPage from './pages/journey/journey.pages';
+import Footer from './components/footer/footer.component';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/projects' component={ProjectsPage} />
         <Route exact path='/journey' component={JourneyPage} />
       </Switch>
+      <Footer />
     </>
   );
 }

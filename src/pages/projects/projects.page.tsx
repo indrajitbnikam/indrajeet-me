@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout/layout.component";
 import './projects.scss';
 import { ReactComponent as URLIcon } from '../../assets/url-icon.svg';
-import { StarIcon, GitForkIcon } from '@primer/octicons-react'
+import { StarIcon, GitForkIcon, MarkGithubIcon } from '@primer/octicons-react'
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState<any>([]);
@@ -102,10 +102,7 @@ const ProjectsPage = () => {
                 </div>
                 <div className='project-urls'>
                   <span onClick={() => openLink(html_url)}>
-                    <img
-                      src='https://cdn.worldvectorlogo.com/logos/github-icon-1.svg'
-                      alt='github repo link'
-                      className='url-icons' />
+                    <MarkGithubIcon verticalAlign='middle' className='url-icons'/>
                   </span>
                   {
                     homepage ? (

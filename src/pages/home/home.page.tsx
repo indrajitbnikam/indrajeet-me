@@ -11,7 +11,7 @@ const HomePage = () => (
       </div>
       <div className='intro-description'>
         <div className='description-container'>
-          <h2 className='description-title'>Hi 👋, <br />I'm Indrajeet</h2>
+          <h2 className='description-title'>🙏 Namaste</h2>
           <p className='description-text'>I am a Passionate Full-Stack Developer with experience in following technologies.</p>
           <div className='description-logos'>
             <span><img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' /></span>
