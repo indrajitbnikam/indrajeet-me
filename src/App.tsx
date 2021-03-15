@@ -12,14 +12,18 @@ import Footer from './components/footer/footer.component';
 function App() {
   return (
     <>
-      <Header />
-      <Switch>
-        <Route exact path='/' component={HomePage}/>
-        <Route exact path='/blogs' component={BlogsPage} />
-        <Route exact path='/projects' component={ProjectsPage} />
-        <Route exact path='/journey' component={JourneyPage} />
-      </Switch>
-      <Footer />
+      <div className='container'>
+        <Header />
+        <div className='content'>
+          <Switch>
+            <Route exact path='/' component={HomePage}/>
+            <Route exact path='/blogs' component={BlogsPage} />
+            <Route exact path='/projects' component={ProjectsPage} />
+            <Route exact path='/journey' component={JourneyPage} />
+          </Switch>
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }
