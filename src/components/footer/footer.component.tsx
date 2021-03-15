@@ -40,7 +40,7 @@ const Footer = () => {
     </p>
     <div className='footer-download-resume'>
       <button className='download-button' onClick={() => openLink('https://drive.google.com/file/d/17ysiokCc8iKnTkmsM11yL73U3VkF04ML/view?usp=sharing')}>
-        Resume/CV
+        Resumé
       </button>
     </div>
   </div>

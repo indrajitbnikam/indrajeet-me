@@ -51,70 +51,74 @@ const ProjectsPage = () => {
     <Layout title='Projects'>
       <div className='projects-container'>
         {
-          projects.map((
-            {
-              id,
-              name,
-              description,
-              html_url,
-              homepage,
-              language,
-              stargazers_count,
-              forks_count,
-            }: any) => (
-            <div key={id} className='project-card'>
-              <div className='project-basic-details'>
-                <p className='project-name'>{ name }</p>
-                <p className='project-description'>{ description }</p>
-              </div>
-              <div className='project-advanced-details'>
-                <div className='git-data'>
-                  {
-                    language ? (
-                      <div className='primary-language-info'>
-                        <span className='color-dot' style={{
-                          backgroundColor: languages[language].color
-                        }} />
-                        <span className='name'>{ language }</span>
-                      </div>
-                    ) : null
-                  }
-                  {
-                    stargazers_count >= 0 ? (
-                      <div className='stargazers-info'>
-                        <span onClick={() => openLink(`${html_url}/stargazers`)}>
-                          <StarIcon verticalAlign='middle' className='star-icon'/>
-                        </span>
-                        <span className='count'>{ stargazers_count }</span>
-                      </div>
-                    ) : null
-                  }
-                  {
-                    forks_count >= 0 ? (
-                      <div className='forks-info'>
-                        <span onClick={() => openLink(`${html_url}/fork`)}>
-                          <GitForkIcon className='fork-icon'/>
-                        </span>
-                        <span className='count'>{ stargazers_count }</span>
-                      </div>
-                    ) : null
-                  }
+          projects.length ? (
+            projects.map((
+              {
+                id,
+                name,
+                description,
+                html_url,
+                homepage,
+                language,
+                stargazers_count,
+                forks_count,
+              }: any) => (
+              <div key={id} className='project-card'>
+                <div className='project-basic-details'>
+                  <p className='project-name'>{ name }</p>
+                  <p className='project-description'>{ description }</p>
                 </div>
-                <div className='project-urls'>
-                  <span onClick={() => openLink(html_url)}>
-                    <MarkGithubIcon verticalAlign='middle' className='url-icons'/>
-                  </span>
-                  {
-                    homepage ? (
-                      <span onClick={() => openLink(homepage)}>
-                        <URLIcon className='url-icons' />
-                      </span>
-                    ) : null
-                  }
+                <div className='project-advanced-details'>
+                  <div className='git-data'>
+                    {
+                      language ? (
+                        <div className='primary-language-info'>
+                          <span className='color-dot' style={{
+                            backgroundColor: languages[language].color
+                          }} />
+                          <span className='name'>{ language }</span>
+                        </div>
+                      ) : null
+                    }
+                    {
+                      stargazers_count >= 0 ? (
+                        <div className='stargazers-info'>
+                          <span onClick={() => openLink(`${html_url}/stargazers`)}>
+                            <StarIcon verticalAlign='middle' className='star-icon'/>
+                          </span>
+                          <span className='count'>{ stargazers_count }</span>
+                        </div>
+                      ) : null
+                    }
+                    {
+                      forks_count >= 0 ? (
+                        <div className='forks-info'>
+                          <span onClick={() => openLink(`${html_url}/fork`)}>
+                            <GitForkIcon className='fork-icon'/>
+                          </span>
+                          <span className='count'>{ stargazers_count }</span>
+                        </div>
+                      ) : null
+                    }
+                  </div>
+                  <div className='project-urls'>
+                    <span onClick={() => openLink(html_url)}>
+                      <MarkGithubIcon verticalAlign='middle' className='url-icons'/>
+                    </span>
+                    {
+                      homepage ? (
+                        <span onClick={() => openLink(homepage)}>
+                          <URLIcon className='url-icons' />
+                        </span>
+                      ) : null
+                    }
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
+            ))
+          ) : (
+            <div>Loading...</div>
+          )
         }
       </div>
     </Layout>

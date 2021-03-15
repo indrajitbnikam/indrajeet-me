@@ -10,6 +10,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export const TitleContainer = styled(Link)`
@@ -19,6 +23,10 @@ export const TitleContainer = styled(Link)`
   text-decoration: none;
   height: 100%;
   margin: 15px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.p`
@@ -37,6 +45,10 @@ export const LinksContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export const HeaderLink = styled(Link)`

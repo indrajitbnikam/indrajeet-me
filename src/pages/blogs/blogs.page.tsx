@@ -28,15 +28,19 @@ const BlogsPage = () => {
     <Layout title='Blogs'>
       <div className='blogs-container'>
         {
-          blogs.map(({ id, date, title: { rendered }, link, _embedded }: any) => (
-            <div key={id} className='blog-card' onClick={() => openBlog(link)}>
-              <img src={_embedded['wp:featuredmedia'][0].link} alt={rendered} className='blog-image'/>
-              <div className='image-overlay'>
-                <p className='blog-title'>{rendered}</p>
-                <p className='blog-date'>{(new Date(date)).toLocaleDateString('in')}</p>
+          blogs.length ? (
+            blogs.map(({ id, date, title: { rendered }, link, _embedded }: any) => (
+              <div key={id} className='blog-card' onClick={() => openBlog(link)}>
+                <img src={_embedded['wp:featuredmedia'][0].link} alt={rendered} className='blog-image'/>
+                <div className='image-overlay'>
+                  <p className='blog-title'>{rendered}</p>
+                  <p className='blog-date'>{(new Date(date)).toLocaleDateString('in')}</p>
+                </div>
               </div>
-            </div>
-          ))
+            ))
+          ) : (
+            <div>Loading...</div>
+          )
         }
       </div>
     </Layout>

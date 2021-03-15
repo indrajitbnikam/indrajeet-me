@@ -11,13 +11,11 @@ const HomePage = () => (
       </div>
       <div className='intro-description'>
         <div className='description-container'>
-          <h2 className='description-title'>Namaste,</h2>
+          <h2 className='description-title'>Namaste!</h2>
           <p className='description-text'>I am a Passionate Full-Stack Developer with experience in following technologies.</p>
           <div className='description-logos'>
             <span><img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' alt='' /></span>
             <span><img src='https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg' alt='' /></span>
-            <span><img src='https://cdn.worldvectorlogo.com/logos/html5.svg' alt='' /></span>
-            <span><img src='https://cdn.worldvectorlogo.com/logos/css3.svg' alt='' /></span>
             <span><img src='https://cdn.worldvectorlogo.com/logos/sass-1.svg' alt='' /></span>
             <span><img src='https://cdn.worldvectorlogo.com/logos/logo-javascript.svg' alt='' /></span>
             <span><img src='https://cdn.worldvectorlogo.com/logos/typescript.svg' alt='' /></span>
