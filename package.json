@@ -1,6 +1,5 @@
 {
   "name": "indrajeet-me",
-  "homepage": "http://indrajitbnikam.github.io/indrajeet-me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,10 +29,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp CNAME ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME ./build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
