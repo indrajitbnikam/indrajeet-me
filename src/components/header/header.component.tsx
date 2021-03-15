@@ -4,10 +4,8 @@ import {
   TitleContainer,
   Title,
   LinksContainer,
-  HeaderLink,
-  LogoImg
+  HeaderLink
 } from './header.styles';
-import logoImage from '../../assets/Indrajeet-min.png';
 
 const Header = () => (
   <HeaderContainer>
