@@ -11,9 +11,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media screen and (max-width: 600px) {
     padding: 20px;
   }
 
@@ -41,7 +44,7 @@
   .footer-middle-msg {
     text-align: center;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
   }

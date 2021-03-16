@@ -8,6 +8,10 @@
   padding: 50px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 600px) {
+    padding: 30px;
+  }
 }
 
 .intro-image {
@@ -17,10 +21,11 @@
 
 .image-container {
   width: 200px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   @media screen and (max-width: 600px) {
     width: 160px;
+    margin-bottom: 20px;
   }
 
   img {
@@ -46,6 +51,7 @@
 }
 
 .description-title {
+  height: 50px; /* To avoid stutter when changing text*/
   font-size: 40px;
   color: #444;
   margin-bottom: 30px;
