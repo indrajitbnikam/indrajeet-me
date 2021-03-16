@@ -1,7 +1,36 @@
+import { useDencrypt } from "use-dencrypt-effect";
 import './home.scss';
 import indrajeetImage from '../../assets/images/indrajeet_pic.jpg';
+import { useEffect } from "react";
 
-const HomePage = () => (
+const greetings = ['नमस्ते', 'Hello', 'Guten Tag', 'こんにちは'];
+
+const HomePage = () => {
+  const [greeting, setGreeting] = useDencrypt('🙏🙏');
+
+  useEffect(() => {
+    let i = 0;
+    let run = true;
+
+    const loop = async () => {
+      while (run) {
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await setGreeting(greetings[i]);
+
+        i = i === greetings.length - 1 ? 0 : i + 1;
+      }
+    };
+
+    if (run) {
+      loop();
+    }
+
+    return () => {
+      run = false;
+    };
+  }, [setGreeting]);
+
+  return (
   <>
     <div className='intro section'>
       <div className='intro-image'>
@@ -11,7 +40,7 @@ const HomePage = () => (
       </div>
       <div className='intro-description'>
         <div className='description-container'>
-          <h2 className='description-title'>Namaste!</h2>
+          <h2 className='description-title'>{greeting}</h2>
           <p className='description-text'>I am a Passionate Full-Stack Developer with experience in following technologies.</p>
           <div className='description-logos'>
             <span><img src='https://cdn.worldvectorlogo.com/logos/react-2.svg' alt='' /></span>
@@ -29,6 +58,6 @@ const HomePage = () => (
       </div>
     </div>
   </>
-);
+)};
 
 export default HomePage;

@@ -25,6 +25,7 @@
     "react-vertical-timeline-component": "^3.3.3",
     "styled-components": "^5.2.1",
     "typescript": "^4.1.2",
+    "use-dencrypt-effect": "^2.0.0-rc.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -32,7 +33,7 @@
     "build": "react-scripts build && cp CNAME ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && copy CNAME ./build",
+    "predeploy": "react-scripts build && copy CNAME ./build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
