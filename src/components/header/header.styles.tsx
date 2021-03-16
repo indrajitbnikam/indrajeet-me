@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
   position: relative;
 
   @media screen and (max-width: 600px) {
-    justify-content: center;
+    padding: 0 5px;
   }
 `;
 
@@ -23,21 +23,27 @@ export const TitleContainer = styled(Link)`
   text-decoration: none;
   height: 100%;
   margin: 15px;
-
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
 `;
 
 export const Title = styled.p`
   color: #444;
   font-family: 'Pacifico', cursive;
   font-size: 26px;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 
-export const LogoImg = styled.img`
-  height: 60px;
-  width: 60px;
+export const TitleShort = styled.p`
+  display: none;
+  color: #444;
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
+
+  @media screen and (max-width: 600px) {
+    display: unset;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -61,6 +67,11 @@ export const HeaderLink = styled(Link)`
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all .3s;
+
+  @media screen and (max-width: 600px) {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
 
   :hover {
     padding-bottom: 15px;

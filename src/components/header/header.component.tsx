@@ -4,13 +4,15 @@ import {
   TitleContainer,
   Title,
   LinksContainer,
-  HeaderLink
+  HeaderLink,
+  TitleShort
 } from './header.styles';
 
 const Header = () => (
   <HeaderContainer>
     <TitleContainer to='/'>
       <Title>Indrajeet Nikam</Title>
+      <TitleShort>Indrajeet</TitleShort>
     </TitleContainer>
     <LinksContainer>
       <HeaderLink to='/blogs'>Blogs</HeaderLink>
