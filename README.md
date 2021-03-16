@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+[![Deployement pipeline](https://github.com/indrajitbnikam/indrajeet-me/actions/workflows/deploy-to-pages.yml/badge.svg)](https://github.com/indrajitbnikam/indrajeet-me/actions/workflows/deploy-to-pages.yml)
+
+# My Portfolio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
