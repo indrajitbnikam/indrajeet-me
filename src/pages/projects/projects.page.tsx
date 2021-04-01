@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/layout/layout.component";
 import './projects.scss';
 import { ReactComponent as URLIcon } from '../../assets/url-icon.svg';
-import { StarIcon, GitForkIcon, MarkGithubIcon } from '@primer/octicons-react'
+import { StarIcon, GitForkIcon, MarkGithubIcon } from '@primer/octicons-react';
+const languageMap = require('language-map');
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState<any>([]);
-  const [languages, setLanguages] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,19 +18,7 @@ const ProjectsPage = () => {
             Accept: 'application/vnd.github.v3+json'
           }
         }
-        const repositoryRequest = axios.get(repositoryRequestUrl, repositoryRequestConfig);
-
-        const languagesRequestUrl = 'https://github-lang-deploy.herokuapp.com/';
-        const languagesRequest = axios.get(languagesRequestUrl);
-
-        const [repositoryResult, languagesResult] = await axios.all([
-          repositoryRequest,
-          languagesRequest
-        ]);
-
-        if (languagesResult.status === 200 && languagesResult.data) {
-          setLanguages(languagesResult.data);
-        }
+        const repositoryResult = await axios.get(repositoryRequestUrl, repositoryRequestConfig);
 
         if (repositoryResult.status === 200 && repositoryResult.data) {
           setProjects(repositoryResult.data);
@@ -74,7 +62,7 @@ const ProjectsPage = () => {
                       language ? (
                         <div className='primary-language-info'>
                           <span className='color-dot' style={{
-                            backgroundColor: languages[language].color
+                            backgroundColor: languageMap[language].color
                           }} />
                           <span className='name'>{ language }</span>
                         </div>
