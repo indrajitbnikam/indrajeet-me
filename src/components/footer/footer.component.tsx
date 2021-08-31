@@ -1,5 +1,6 @@
 import './footer.scss';
 import fullyUnderstood from '../../assets/fu-icon.png';
+import { ReactComponent as HashnodeLogo } from '../../assets/hashnode.svg';
 import { ReactComponent as LinkedinLogo } from '../../assets/linkedin.svg';
 import { ReactComponent as XingLogo } from '../../assets/xing.svg';
 import { ReactComponent as GithubLogo } from '../../assets/github.svg';
@@ -15,6 +16,9 @@ const Footer = () => {
   <div className='footer-container'>
     <div className='footer-social-media'>
       <div className='footer-links'>
+        <span onClick={() => openLink('https://hashnode.com/@indrajitbnikam')}>
+          <HashnodeLogo className='icon' />
+        </span>
         <span onClick={() => openLink('https://fullyunderstood.com/author/indrajitbnikam/')}>
           <img src={fullyUnderstood} alt='Fullyunderstood logo' className='icon'/>
         </span>
